@@ -15,6 +15,7 @@ script: |
   sudo apt-get update
   sudo apt-get install sbt
   wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.0/sbt-launch.jar
+  mkdir -p /home/ubuntu/.sbt/.lib/0.13.0/
   mv sbt-launch.jar /home/ubuntu/.sbt/.lib/0.13.0/sbt-launch.jar
 env:
   WERCKER_RETHINKDB_PORT: 28015
