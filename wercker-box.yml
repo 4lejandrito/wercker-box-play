@@ -1,0 +1,21 @@
+name: rethinkdb
+version: 0.0.1
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type: service
+platform: ubuntu@12.04
+description: wercker box for play 2.2.x through sbt
+keywords:
+  - sbt
+  - play framework 2.2.x
+packages:
+  - sbt@0.13.0
+script: |
+  wget http://apt.typesafe.com/repo-deb-build-0002.deb
+  sudo dpkg -i repo-deb-build-0002.deb
+  sudo apt-get update
+  sudo apt-get install sbt
+env:
+  WERCKER_RETHINKDB_PORT: 28015
+  WERCKER_RETHINKDB_HOST: $$HOST$$
+  WERCKER_RETHINKDB_URL: $$HOST$$:28015
+  WERCKER_RETHINKDB_VERSION: "1.6.1"
