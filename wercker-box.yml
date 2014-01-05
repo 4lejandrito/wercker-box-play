@@ -1,5 +1,5 @@
 name: play
-version: 1.0.1
+version: 1.0.2
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
@@ -19,8 +19,3 @@ script: |
   wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.0/sbt-launch.jar
   mkdir -p /home/ubuntu/.sbt/.lib/0.13.0/
   mv sbt-launch.jar /home/ubuntu/.sbt/.lib/0.13.0/sbt-launch.jar
-env:
-  WERCKER_RETHINKDB_PORT: 28015
-  WERCKER_RETHINKDB_HOST: $$HOST$$
-  WERCKER_RETHINKDB_URL: $$HOST$$:28015
-  WERCKER_RETHINKDB_VERSION: "1.6.1"
