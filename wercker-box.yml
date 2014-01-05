@@ -10,6 +10,7 @@ keywords:
 packages:
   - sbt@0.13.0
 script: |
+  sudo apt-get install openjdk-6-jdk
   wget http://apt.typesafe.com/repo-deb-build-0002.deb
   sudo dpkg -i repo-deb-build-0002.deb
   sudo apt-get update
