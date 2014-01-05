@@ -1,5 +1,5 @@
 name: play
-version: 1.0.6
+version: 1.0.7
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
@@ -21,3 +21,9 @@ script: |
   wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.0/sbt-launch.jar
   mkdir -p /home/ubuntu/.sbt/.lib/0.13.0/
   mv sbt-launch.jar /home/ubuntu/.sbt/.lib/0.13.0/sbt-launch.jar
+  cd /usr/local/share
+  sudo wget http://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+  sudo tar xjf phantomjs-1.9.2-linux-x86_64.tar.bz2
+  sudo ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+  sudo ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+  sudo ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
