@@ -1,14 +1,16 @@
 name: play
-version: 1.0.5
+version: 1.0.6
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
-description: wercker box for play 2.2.x through sbt
+description: Wercker box for play 2.2.x through sbt and java 1.6.
 keywords:
   - sbt
   - play framework 2.2.x
+  - play
 packages:
   - sbt@0.13.0
+  - openjdk-6-jdk
 script: |
   sudo apt-get update
   sudo apt-get install openjdk-6-jdk
