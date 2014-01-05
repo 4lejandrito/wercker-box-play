@@ -1,5 +1,5 @@
 name: play
-version: 1.0.3
+version: 1.0.4
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
@@ -12,6 +12,7 @@ packages:
 script: |
   sudo apt-get update
   sudo apt-get remove openjdk-6-jre
+  sudo apt-get install openjdk-7-jre
   sudo apt-get install openjdk-7-jdk
   wget http://apt.typesafe.com/repo-deb-build-0002.deb
   sudo dpkg -i repo-deb-build-0002.deb
