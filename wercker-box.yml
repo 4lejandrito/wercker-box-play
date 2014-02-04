@@ -1,6 +1,5 @@
 name: play
-version: 1.0.9
-inherits: wercker/ubuntu12.04-webessentials@0.0.3
+version: 1.1.0
 type: service
 platform: ubuntu@12.04
 description: Wercker box for play 2.2.x through sbt and java 1.6.
@@ -14,6 +13,9 @@ packages:
   - phantomjs@1.9.2
 script: |
   sudo apt-get update
+
+  # tools
+  sudo apt-get install curl wget
 
   # jdk6
   sudo apt-get install openjdk-6-jdk
